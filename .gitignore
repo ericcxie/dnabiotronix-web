@@ -1,36 +1,89 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Next.js & TypeScript
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
+# Node modules
+node_modules/
 
-# testing
-/coverage
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
+# Security
 *.pem
+*.key
 
-# debug
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime*
+.project
+
+# Log files
+*.log
+*.pid
+*.pid.lock
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# public
+
+# Vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# Prisma
+*.prisma
+
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
