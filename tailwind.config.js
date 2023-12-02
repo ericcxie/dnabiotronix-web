@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
       backgroundImage: {
         "hero-pattern": "url('/assets/SH_doublehelix_01.svg')",
       },
