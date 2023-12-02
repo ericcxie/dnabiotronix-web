@@ -1,41 +1,40 @@
 import React from "react";
 import teamMembers from "../data/teamMembers";
+import SectionHeader from "../common/Header";
 
 const Team: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="text-center mb-12 ">
-        <h1 className="text-5xl font-extrabold leading-tight text-gray-900 mb-4">
-          Meet the Team
-        </h1>
-        <div className="mx-auto max-w-4xl">
-          <p className="text-gray-700 text-lg font-light">
-            With extensive experiences and diverse skill sets in Electrical
-            Engineering, Biological and Surface Chemistry, and Finance, we've
-            got a long proven history of success working together.
+      <SectionHeader text="Behind The Idea" />
+      <div className="text-start mb-12 ">
+        <h1 className="text-5xl leading-tight text-gray-900 mb-4">Team</h1>
+        <div className="max-w-4xl">
+          <p className="text-gray-700 text-md md:text-lg">
+            Our team boasts a long-standing history of successful collaboration,
+            leveraging extensive experience and diverse expertise in Electrical
+            Engineering, Biological and Surface Chemistry, and Finance.
           </p>
         </div>
       </div>
 
       <div className="flex flex-wrap justify-center">
         {teamMembers.map((member) => (
-          <div key={member.name} className="p-4 md:w-1/2 lg:w-1/3">
-            <div className="flex flex-col items-center">
+          <div key={member.name} className="p-4 md:w-1/3 lg:w-1/4 md:mx-10">
+            <div className="flex flex-col items-center md:items-start">
               <img
                 src={member.image}
                 alt={member.name}
-                width={180}
-                className="rounded-3xl drop-shadow-lg transition-shadow duration-300"
+                className="w-[200px] md:w-[250px] rounded-2xl"
               />
-              <h2 className="text-xl text-black font-bold mt-4">
-                {member.name}
-              </h2>
-              <p className="text-gray-700">{member.title}</p>
-              <div className="text-gray-600 text-sm text-center mt-2 max-w-xs mx-auto">
+              <h2 className="text-xl text-black mt-4">{member.name}</h2>
+              <p className="text-gray-700 uppercase">{member.title}</p>
+              <ul className="text-left list-disc pl-5 mt-2">
                 {member.description.split("\n").map((line, i) => (
-                  <p key={i}>{line}</p>
+                  <li key={i} className="text-gray-600 text-sm">
+                    {line}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         ))}
