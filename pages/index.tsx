@@ -15,8 +15,8 @@ const HomePage: React.FC = () => {
       <main className="flex-grow px-10 md:px-32">
         <About />
         <Technology />
-        <Team />
         <News />
+        <Team />
         <Connect />
       </main>
       <Footer />

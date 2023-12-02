@@ -25,13 +25,19 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-2 lg:py-12 lg:flex lg:items-start">
+          <div className="lg:col-span-2 lg:flex lg:items-start">
             <div>
               <p className="text-md md:text-lg text-center md:text-start text-black">
                 Address:
               </p>
-              <p className="text-md md:text-lg text-center md:text-start text-black">
-                653 S Cardinal St, Gilbert, AZ 85296
+              <p className="text-md md:text-lg text-center md:text-start text-black hover:text-blue-600 hover:underline transition duration-200">
+                <a
+                  href="https://maps.app.goo.gl/UJmfcAbzKqjgaMcv6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  653 S Cardinal St, Gilbert, AZ 85296
+                </a>
               </p>
               <div className="flex justify-center md:justify-start space-x-4 mt-4 text-black">
                 <a
@@ -71,15 +77,15 @@ const validate = (values: FormValues) => {
   const errors: Partial<FormValues> = {};
 
   if (!values.name) {
-    errors.name = "Required";
+    errors.name = "Please enter a name";
   }
 
   if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Invalid email format";
+    errors.email = "Please enter a valid email address";
   }
 
   if (!values.message) {
-    errors.message = "Required";
+    errors.message = "Please enter a message";
   }
 
   return errors;
@@ -104,7 +110,7 @@ const ContactForm: React.FC = () => {
         name="contact"
         onSubmit={formik.handleSubmit}
         data-netlify="true"
-        className="space-y-4 bg-white p-6 rounded-[calc(1.5rem-1px)] relative"
+        className="space-y-5 bg-white p-6 rounded-[calc(1.5rem-1px)] relative"
       >
         <div>
           <label className="relative">
@@ -124,7 +130,7 @@ const ContactForm: React.FC = () => {
             </span>
           </label>
           {formik.errors.name && formik.touched.name && (
-            <p className="text-sm text-gray-600 lg:text-base">
+            <p className="text-sm mt-1 text-gray-600 lg:text-base">
               {formik.errors.name}
             </p>
           )}
@@ -147,7 +153,7 @@ const ContactForm: React.FC = () => {
             </span>
           </label>
           {formik.errors.email && formik.touched.email && (
-            <p className="text-sm text-gray-600 lg:text-base">
+            <p className="text-sm mt-1 text-gray-600 lg:text-base">
               {formik.errors.email}
             </p>
           )}
@@ -158,7 +164,6 @@ const ContactForm: React.FC = () => {
             <textarea
               className="w-full text-gray-600 bg-white transition duration-200 rounded-xl border border-gray-200 p-3 text-sm focus:outline-none"
               rows={8}
-              type="text"
               id="message"
               name="message"
               placeholder=" "
@@ -172,13 +177,13 @@ const ContactForm: React.FC = () => {
             </span>
           </label>
           {formik.errors.message && formik.touched.message && (
-            <p className="text-sm text-gray-600 lg:text-base">
+            <p className="text-sm mt-1 text-gray-600 lg:text-base">
               {formik.errors.message}
             </p>
           )}
           {submitted && (
-            <p className="text-sm text-wild-blue-400 dark:text-wild-blue-400 lg:text-base">
-              Success! I will get back to you soon.
+            <p className="text-sm mt-1 text-wild-blue-400 dark:text-wild-blue-400 lg:text-base">
+              Your message has been successfully sent!
             </p>
           )}
         </div>
