@@ -15,7 +15,7 @@ const News: React.FC = () => {
           <h2 className="mb-2 text-xl font-extrabold leading-snug tracking-tight text-gray-800 md:text-3xl">
             <a
               href="https://news.asu.edu/20231109-asu-startup-dna-biotronix-wins-grand-prize-skysong-innovations-startup-challenge#:~:text=DNA%20Biotronix%20won%20the%20challenge,sweat%20at%20the%20molecular%20level"
-              className="text-gray-900 hover:text-blue-800"
+              className="text-gray-900 hover:text-theme-blue-800"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -31,7 +31,7 @@ const News: React.FC = () => {
           </p>
           <a
             href="https://news.asu.edu/20231109-asu-startup-dna-biotronix-wins-grand-prize-skysong-innovations-startup-challenge#:~:text=DNA%20Biotronix%20won%20the%20challenge,sweat%20at%20the%20molecular%20level"
-            className="inline-flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600"
+            className="inline-flex items-center px-6 py-3 text-gray-200 bg-theme-blue-600 rounded-xl hover:bg-theme-blue-700 hover:text-gray-200"
             target="_blank"
             rel="noopener noreferrer"
           >

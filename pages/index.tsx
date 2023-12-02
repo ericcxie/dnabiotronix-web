@@ -9,10 +9,10 @@ import About from "../components/sections/About";
 
 const HomePage: React.FC = () => {
   return (
-    <div className="bg-white flex flex-col min-h-screen font-inter">
+    <div className="bg-white flex flex-col min-h-screen font-sora">
       <Navbar />
       <Hero />
-      <main className="flex-grow px-32">
+      <main className="flex-grow px-10 md:px-32">
         <About />
         <Technology />
         <Team />

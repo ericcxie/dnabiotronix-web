@@ -1,8 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text {
+  @apply transform bg-white -translate-y-6 -translate-x-1 scale-75;
+}
+
+input[type="email"]:focus ~ .input-text,
+input[type="email"]:not(:placeholder-shown) ~ .input-text {
+  @apply transform bg-white -translate-y-6 -translate-x-3 scale-75;
+}
+
+textarea[type="text"]:focus ~ .input-text,
+textarea[type="text"]:not(:placeholder-shown) ~ .input-text {
+  @apply transform bg-white py-0 -translate-y-3 -translate-x-2 scale-75;
+}
 
 :root {
   --max-width: 1100px;
