@@ -127,7 +127,7 @@ const ContactForm: React.FC = () => {
         data-netlify="true"
         className="space-y-5 bg-white p-6 rounded-[calc(1.5rem-1px)] relative"
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="ContactBiotronix" />
         <div>
           <label className="relative">
             <input
