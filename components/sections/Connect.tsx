@@ -113,7 +113,7 @@ const ContactForm: React.FC = () => {
     initialValues: { name: "", email: "", message: "" },
     validate,
     onSubmit: (values, actions) => {
-      handleSubmit("contact", values);
+      handleSubmit("ContactBiotronix", values);
       actions.resetForm();
       setSubmitted(true);
     },
@@ -122,9 +122,8 @@ const ContactForm: React.FC = () => {
   return (
     <div className="rounded-3xl p-px border">
       <form
-        name="contact"
+        name="ContactBiotronix"
         onSubmit={formik.handleSubmit}
-        method="POST"
         data-netlify="true"
         className="space-y-5 bg-white p-6 rounded-[calc(1.5rem-1px)] relative"
       >
