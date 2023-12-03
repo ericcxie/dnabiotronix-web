@@ -4,7 +4,7 @@ import SectionHeader from "../common/Header";
 
 const Team: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 xl:px-20 py-8">
       <SectionHeader text="Behind The Idea" />
       <div className="text-start mb-12 ">
         <h1 className="text-5xl leading-tight text-gray-900 mb-4">Team</h1>

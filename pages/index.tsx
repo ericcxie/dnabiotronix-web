@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
         <News />
         <Connect />
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
