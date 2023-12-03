@@ -8,4 +8,18 @@ export const newsData = [
     readMoreLink:
       "https://news.asu.edu/20231109-asu-startup-dna-biotronix-wins-grand-prize-skysong-innovations-startup-challenge#:~:text=DNA%20Biotronix%20won%20the%20challenge,sweat%20at%20the%20molecular%20level.",
   },
+  {
+    date: "November 10, 2023",
+    title: "Dummy Article 1",
+    description:
+      "This is a dummy article. It contains dummy text for demonstration purposes.",
+    readMoreLink: "https://example.com/dummy-article-1",
+  },
+  {
+    date: "November 11, 2023",
+    title: "Dummy Article 2",
+    description:
+      "This is another dummy article. It also contains dummy text for demonstration purposes.",
+    readMoreLink: "https://example.com/dummy-article-2",
+  },
 ];
