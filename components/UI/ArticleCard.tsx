@@ -53,7 +53,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
       </AnimatePresence>
       <a
         href={readMoreLink}
-        className="text-gray-600 flex uppercase hover:underline absolute bottom-2 right-3 mb-4 mr-4"
+        className="text-gray-600 flex uppercase hover:underline absolute bottom-2 right-1 lg:right-3 mb-4 mr-4"
         target="_blank"
         rel="noreferrer"
       >
@@ -63,7 +63,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         </span>
       </a>
       {numArticles > 1 && (
-        <div className="space-x-4 absolute bottom-4 left-6">
+        <div className="space-x-4 absolute bottom-5 left-6">
           <BackwardButton onClick={onBackwardClick} />
           <ForwardButton onClick={onForwardClick} />
         </div>

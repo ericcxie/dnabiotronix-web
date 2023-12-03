@@ -17,7 +17,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="max-w-screen-2xl mx-auto">
       <div className="container mx-auto px-4 xl:px-20 py-8">
         <SectionHeader text="Reach Out" />
-        <h1 className="text-5xl leading-tight text-gray-900 mb-4">
+        <h1 className="text-4xl lg:text-5xl leading-tight text-gray-900 mb-4">
           Contact Us
         </h1>
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
@@ -133,7 +133,7 @@ const ContactForm: React.FC = () => {
               onFocus={() => setSubmitted(false)}
               value={formik.values.name}
             />
-            <span className="cursor-text text-md text-gray-500 dark:text-pf-light text-opacity-80 absolute left-0 -top-1 mx-1 px-2 transition duration-200 input-text">
+            <span className="cursor-text text-md text-gray-500 dark:text-pf-light text-opacity-80 absolute left-0 top-0 mx-1 px-2 transition duration-200 input-text">
               Name
             </span>
           </label>
@@ -156,7 +156,7 @@ const ContactForm: React.FC = () => {
               onFocus={() => setSubmitted(false)}
               value={formik.values.email}
             />
-            <span className="cursor-text text-md text-gray-500 dark:text-pf-light text-opacity-80 absolute left-0 -top-1 mx-1 px-2 transition duration-200 input-text">
+            <span className="cursor-text text-md text-gray-500 dark:text-pf-light text-opacity-80 absolute left-0 top-0 mx-1 px-2 transition duration-200 input-text">
               Email address
             </span>
           </label>
@@ -200,7 +200,7 @@ const ContactForm: React.FC = () => {
           <div className="relative group mt-2">
             <button
               type="submit"
-              className="transition-colors border duration-300 relative text-sm lg:text-md inline-flex w-full items-center justify-center rounded-xl shadow-light-button dark:shadow-none active:shadow-inner bg-white dark:bg-darkmode px-5 py-3 text-gray-600 dark:text-gray-200"
+              className="transition-colors border duration-300 relative hover:bg-[#D9D9D9] text-sm lg:text-md inline-flex w-full items-center justify-center rounded-xl shadow-light-button dark:shadow-none active:shadow-inner bg-white dark:bg-darkmode px-5 py-3 text-gray-600 dark:text-gray-200"
             >
               <span className="text-gray-500">Send message</span>
             </button>

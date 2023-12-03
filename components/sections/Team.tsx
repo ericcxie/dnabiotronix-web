@@ -7,9 +7,11 @@ const Team: React.FC = () => {
     <div className="container mx-auto px-4 xl:px-20 py-8">
       <SectionHeader text="Behind The Idea" />
       <div className="text-start mb-12 ">
-        <h1 className="text-5xl leading-tight text-gray-900 mb-4">Team</h1>
+        <h1 className="text-4xl lg:text-5xl leading-tight text-gray-900 mb-4">
+          Team
+        </h1>
         <div className="max-w-4xl">
-          <p className="text-gray-700 text-md md:text-lg">
+          <p className="text-gray-600 font-light text-md md:text-lg">
             Our team boasts a long-standing history of successful collaboration,
             leveraging extensive experience and diverse expertise in Electrical
             Engineering, Biological and Surface Chemistry, and Finance.
