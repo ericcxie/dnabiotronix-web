@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import handleSubmit from "../utils/submitForm";
 import { FaFacebookSquare, FaTwitterSquare, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import SectionHeader from "../common/Header";
+import FadeUpMotionDiv from "../utils/FadeUpMotion";
 
 interface FormValues {
   [key: string]: string;
@@ -14,60 +16,73 @@ interface FormValues {
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="max-w-screen-2xl mx-auto">
-      <div className="mx-auto max-w-screen-xl pb-16">
-        <h1 className="text-center md:text-start text-4xl md:text-5xl py-5 bg-clip-text text-black font-bold">
-          Contact Us
-        </h1>
-        <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-          <div className="lg:col-span-3">
-            <div className="transition-colors duration-300 relative rounded-lg  ">
-              <ContactForm />
+      <div className="container mx-auto px-4 xl:px-20 py-8">
+        <FadeUpMotionDiv>
+          <SectionHeader text="Reach Out" />
+        </FadeUpMotionDiv>
+        <FadeUpMotionDiv>
+          <h1 className="text-4xl lg:text-5xl leading-tight text-gray-900 mb-4">
+            Contact Us
+          </h1>
+        </FadeUpMotionDiv>
+        <FadeUpMotionDiv>
+          <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
+            <div className="lg:col-span-3">
+              <div className="transition-colors duration-300 relative rounded-lg">
+                <ContactForm />
+              </div>
             </div>
-          </div>
 
-          <div className="lg:col-span-2 lg:flex lg:items-start">
-            <div>
-              <p className="text-md md:text-lg text-center md:text-start text-black">
-                Address:
-              </p>
-              <p className="text-md md:text-lg text-center md:text-start text-black hover:text-blue-600 hover:underline transition duration-200">
-                <a
-                  href="https://maps.app.goo.gl/UJmfcAbzKqjgaMcv6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  653 S Cardinal St, Gilbert, AZ 85296
-                </a>
-              </p>
-              <div className="flex justify-center md:justify-start space-x-4 mt-4 text-black">
-                <a
-                  href="https://www.facebook.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaFacebookSquare size={33} />
-                </a>
-                <a
-                  href="https://twitter.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaTwitterSquare size={33} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin size={33} />
-                </a>
-                <a href="mailto:yourEmail@example.com">
-                  <MdEmail size={33} />
-                </a>
+            <div className="lg:col-span-2 lg:flex lg:items-start">
+              <div>
+                <p className="text-md md:text-lg text-center md:text-start text-black">
+                  Address:
+                </p>
+                <p className="text-md md:text-lg text-center md:text-start text-black hover:text-blue-600 hover:underline transition duration-200">
+                  <a
+                    href="https://maps.app.goo.gl/UJmfcAbzKqjgaMcv6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    653 S Cardinal St, Gilbert, AZ 85296
+                  </a>
+                </p>
+                <div className="flex justify-center md:justify-start space-x-4 mt-4 text-black">
+                  <a
+                    className="hover:text-[#4267B2] transition duration-200"
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaFacebookSquare size={33} />
+                  </a>
+                  <a
+                    className="hover:text-[#1DA1F2] transition duration-200"
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaTwitterSquare size={33} />
+                  </a>
+                  <a
+                    className="hover:text-[#0077B5] transition duration-200"
+                    href="https://www.linkedin.com/in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedin size={33} />
+                  </a>
+                  <a
+                    className="hover:text-[#0072C6] transition duration-200"
+                    href="mailto:yourEmail@example.com"
+                  >
+                    <MdEmail size={33} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </FadeUpMotionDiv>
       </div>
     </section>
   );
@@ -125,7 +140,7 @@ const ContactForm: React.FC = () => {
               onFocus={() => setSubmitted(false)}
               value={formik.values.name}
             />
-            <span className="cursor-text text-md text-gray-500 dark:text-pf-light text-opacity-80 absolute left-0 -top-1 mx-1 px-2 transition duration-200 input-text">
+            <span className="cursor-text text-md text-gray-500 dark:text-pf-light text-opacity-80 absolute left-0 top-0 mx-1 px-2 transition duration-200 input-text">
               Name
             </span>
           </label>
@@ -148,7 +163,7 @@ const ContactForm: React.FC = () => {
               onFocus={() => setSubmitted(false)}
               value={formik.values.email}
             />
-            <span className="cursor-text text-md text-gray-500 dark:text-pf-light text-opacity-80 absolute left-0 -top-1 mx-1 px-2 transition duration-200 input-text">
+            <span className="cursor-text text-md text-gray-500 dark:text-pf-light text-opacity-80 absolute left-0 top-0 mx-1 px-2 transition duration-200 input-text">
               Email address
             </span>
           </label>
@@ -192,7 +207,7 @@ const ContactForm: React.FC = () => {
           <div className="relative group mt-2">
             <button
               type="submit"
-              className="transition-colors border duration-300 relative text-sm lg:text-md inline-flex w-full items-center justify-center rounded-xl shadow-light-button dark:shadow-none active:shadow-inner bg-white dark:bg-darkmode px-5 py-3 text-gray-600 dark:text-gray-200"
+              className="transition-colors border duration-300 relative hover:bg-[#D9D9D9] text-sm lg:text-md inline-flex w-full items-center justify-center rounded-xl shadow-light-button dark:shadow-none active:shadow-inner bg-white dark:bg-darkmode px-5 py-3 text-gray-600 dark:text-gray-200"
             >
               <span className="text-gray-500">Send message</span>
             </button>

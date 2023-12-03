@@ -12,14 +12,14 @@ const HomePage: React.FC = () => {
     <div className="bg-white flex flex-col min-h-screen font-sora">
       <Navbar />
       <Hero />
-      <main className="flex-grow px-10 md:px-32">
+      <main className="flex-grow mx-4 md:px-10">
         <About />
         <Technology />
-        <News />
         <Team />
+        <News />
         <Connect />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 };
