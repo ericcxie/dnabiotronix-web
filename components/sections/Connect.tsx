@@ -125,7 +125,6 @@ const ContactForm: React.FC = () => {
         name="contact"
         onSubmit={formik.handleSubmit}
         data-netlify="true"
-        method="POST"
         className="space-y-5 bg-white p-6 rounded-[calc(1.5rem-1px)] relative"
       >
         <div>
