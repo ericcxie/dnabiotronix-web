@@ -197,7 +197,7 @@ const ContactForm: React.FC = () => {
             </p>
           )}
           {submitted && (
-            <p className="text-sm mt-1 text-wild-blue-400 dark:text-wild-blue-400 lg:text-base">
+            <p className="text-sm mt-1 text-gray-600 dark:text-wild-blue-400 lg:text-base">
               Your message has been successfully sent!
             </p>
           )}
