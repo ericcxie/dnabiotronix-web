@@ -71,9 +71,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="text-center text-gray-500 mt-2 mb-6">
-        &copy; {new Date().getFullYear()} DNA Biotronix. All rights reserved.
-      </div>
     </section>
   );
 };

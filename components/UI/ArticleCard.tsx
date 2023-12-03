@@ -38,7 +38,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
           animate="visible"
           exit="hidden"
           variants={variants}
-          transition={{ duration: 1.3 }}
+          transition={{ duration: 1.0 }}
         >
           <div className="text-gray-500 mb-2 absolute top-8 uppercase">
             {date}

@@ -23,7 +23,7 @@ const News: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 xl:px-20 py-8">
-      <SectionHeader text="News" />
+      <SectionHeader text="In the spotlight" />
       <div className="flex flex-col lg:flex-row justify-center xl:justify-between items-center space-y-8 lg:space-y-0 md:space-x-20 mx-auto">
         <div className="text-black text-5xl xl:text-7xl flex flex-col justify-between h-64 xl:h-96">
           <h1>Our______</h1>
