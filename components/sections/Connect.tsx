@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import handleSubmit from "../utils/submitForm";
 import { FaFacebookSquare, FaTwitterSquare, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import SectionHeader from "../common/Header";
 
 interface FormValues {
   [key: string]: string;
@@ -14,13 +15,14 @@ interface FormValues {
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="max-w-screen-2xl mx-auto">
-      <div className="mx-auto max-w-screen-xl pb-16">
-        <h1 className="text-center md:text-start text-4xl md:text-5xl py-5 bg-clip-text text-black font-bold">
+      <div className="container mx-auto px-4 xl:px-20 py-8">
+        <SectionHeader text="Connect" />
+        <h1 className="text-5xl leading-tight text-gray-900 mb-4">
           Contact Us
         </h1>
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-3">
-            <div className="transition-colors duration-300 relative rounded-lg  ">
+            <div className="transition-colors duration-300 relative rounded-lg">
               <ContactForm />
             </div>
           </div>
@@ -68,6 +70,9 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="text-center text-gray-500 mt-2 mb-6">
+        &copy; {new Date().getFullYear()} DNA Biotronix. All rights reserved.
       </div>
     </section>
   );
