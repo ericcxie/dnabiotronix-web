@@ -7,8 +7,7 @@ interface BackwardButtonProps {
 const BackwardButton: React.FC<BackwardButtonProps> = ({ onClick }) => {
   const baseClass =
     "inline-block rounded-full p-3 focus:outline-none focus:ring";
-  const baseVariant =
-    "bg-[#D9D9D9] text-black hover:bg-[#bebebe] active:text-indigo-500";
+  const baseVariant = "bg-[#D9D9D9] text-black hover:bg-[#bebebe]";
 
   return (
     <button className={`${baseClass} ${baseVariant}`} onClick={onClick}>
