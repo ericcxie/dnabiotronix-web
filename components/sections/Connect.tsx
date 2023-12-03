@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="max-w-screen-2xl mx-auto">
       <div className="container mx-auto px-4 xl:px-20 py-8">
-        <SectionHeader text="Connect" />
+        <SectionHeader text="Reach Out" />
         <h1 className="text-5xl leading-tight text-gray-900 mb-4">
           Contact Us
         </h1>
@@ -43,6 +43,7 @@ const Contact: React.FC = () => {
               </p>
               <div className="flex justify-center md:justify-start space-x-4 mt-4 text-black">
                 <a
+                  className="hover:text-[#4267B2] transition duration-200"
                   href="https://www.facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -50,6 +51,7 @@ const Contact: React.FC = () => {
                   <FaFacebookSquare size={33} />
                 </a>
                 <a
+                  className="hover:text-[#1DA1F2] transition duration-200"
                   href="https://twitter.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -57,13 +59,17 @@ const Contact: React.FC = () => {
                   <FaTwitterSquare size={33} />
                 </a>
                 <a
+                  className="hover:text-[#0077B5] transition duration-200"
                   href="https://www.linkedin.com/in/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaLinkedin size={33} />
                 </a>
-                <a href="mailto:yourEmail@example.com">
+                <a
+                  className="hover:text-[#0072C6] transition duration-200"
+                  href="mailto:yourEmail@example.com"
+                >
                   <MdEmail size={33} />
                 </a>
               </div>
