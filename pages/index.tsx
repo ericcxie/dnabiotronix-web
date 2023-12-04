@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
     <div className="bg-white flex flex-col min-h-screen font-sora">
       <Navbar />
       <Hero />
-      <div className="absolute right-[100px] top-[400px] z-[0] opacity-30 lg:opacity-100 
+      <div className="hidden xl:block absolute right-[100px] top-[400px] z-[0] opacity-30 lg:opacity-100 
       transform translate-x-[300px] w-[78vw]">
         <img src="/assets/SH_doublehelix_01.svg" alt="Hero Background" />
       </div>
