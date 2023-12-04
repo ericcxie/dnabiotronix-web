@@ -45,7 +45,7 @@ const Hero = () => {
                 </h1>
                 </FadeUpMotionDiv>
                 <FadeUpMotionDiv>
-                <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-gray-500 sm:text-lg md:text-xl">
+                <p className="dark:text-body-color-dark mb-6 sm:mb-12 text-base !leading-relaxed text-gray-500 sm:text-lg md:text-xl">
                 Revolutionizing diabetes <br/> management
                 </p>
                 </FadeUpMotionDiv>
