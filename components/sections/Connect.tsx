@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
                   </a>
                   <a
                     className="hover:text-[#0072C6] transition duration-200"
-                    href="mailto:yourEmail@example.com"
+                    href="mailto:michaelc@dnab.bio"
                   >
                     <MdEmail size={33} />
                   </a>

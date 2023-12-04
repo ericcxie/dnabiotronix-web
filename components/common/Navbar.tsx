@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import FadeUpMotionDiv from "../utils/FadeUpMotion";
 import { FaBars } from "react-icons/fa";
@@ -7,6 +7,20 @@ import { IoClose } from "react-icons/io5";
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const navRef = React.useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,31 +51,99 @@ const Navbar: React.FC = () => {
           <div className="justify-start">
             <span
               className="text-xl font-bold
-                    bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text"
+                bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text"
             >
-              DNA Biotronix
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-100}
+                className="text-xl font-bold cursor-pointer
+    bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text"
+              >
+                DNA Biotronix
+              </Link>
             </span>
           </div>
         </FadeUpMotionDiv>
 
         <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isOpen ? <IoClose size={20} /> : <FaBars size={20} />}
+          <button
+            onClick={toggleMenu}
+            className="hover:bg-gray-200 hover:bg-opacity-60 p-2 rounded-lg"
+          >
+            <FaBars size={24} />
           </button>
         </div>
 
-        <div
-          className={`justify-end flex pt-0.5 text-gray-600 ${
-            !isOpen && "hidden"
-          } md:flex`}
-        >
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="absolute top-16 left-4 right-4 mx-auto p-4 pl-6 bg-white border rounded-3xl shadow-md z-10">
+            <nav ref={navRef}>
+              <Link
+                to="home"
+                smooth={true}
+                duration={1000}
+                offset={-100}
+                onClick={toggleMenu}
+                className="block py-2 text-gray-900 hover:text-gray-700"
+              >
+                Home
+              </Link>
+              <Link
+                to="about"
+                smooth={true}
+                duration={1000}
+                offset={-50}
+                onClick={toggleMenu}
+                className="block py-2 text-gray-900 hover:text-gray-700"
+              >
+                About
+              </Link>
+              <Link
+                to="news"
+                smooth={true}
+                duration={1000}
+                offset={-50}
+                onClick={toggleMenu}
+                className="block py-2 text-gray-900 hover:text-gray-700"
+              >
+                News
+              </Link>
+              <Link
+                to="team"
+                smooth={true}
+                duration={1000}
+                offset={-50}
+                onClick={toggleMenu}
+                className="block py-2 text-gray-900 hover:text-gray-700"
+              >
+                Team
+              </Link>
+              <Link
+                to="contact"
+                smooth={true}
+                duration={1000}
+                offset={-50}
+                onClick={toggleMenu}
+                className="block py-2 text-gray-900 hover:text-gray-700"
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
+        )}
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex justify-end pt-0.5 text-gray-600">
           <FadeUpMotionDiv>
             <Link
               to="about"
               smooth={true}
               duration={1000}
-              className="mx-10 text-sm hover:text-black hover:cursor-pointer 
-                 transition duration-300"
+              offset={-50}
+              className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300"
             >
               About
             </Link>
@@ -71,8 +153,8 @@ const Navbar: React.FC = () => {
               to="news"
               smooth={true}
               duration={1000}
-              className="mx-10 text-sm hover:text-black hover:cursor-pointer 
-                 transition duration-300"
+              offset={-50}
+              className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300"
             >
               News
             </Link>
@@ -82,8 +164,8 @@ const Navbar: React.FC = () => {
               to="team"
               smooth={true}
               duration={1000}
-              className="mx-10 text-sm hover:text-black hover:cursor-pointer
-           transition duration-300"
+              offset={-50}
+              className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300"
             >
               Team
             </Link>
@@ -93,8 +175,8 @@ const Navbar: React.FC = () => {
               to="contact"
               smooth={true}
               duration={1000}
-              className="mx-10 text-sm hover:text-black hover:cursor-pointer
-            transition duration-300"
+              offset={-50}
+              className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300"
             >
               Contact
             </Link>
