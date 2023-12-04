@@ -7,7 +7,7 @@ import { IoClose } from "react-icons/io5";
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = React.useRef<HTMLDivElement>(null);
+  const navRef = React.useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -36,8 +36,6 @@ const Navbar: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  console.log(isOpen);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
