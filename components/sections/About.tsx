@@ -11,11 +11,11 @@ const About: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 xl:px-20 py-8" id="about">
+    <div className="container mx-auto px-4 xl:px-20 py-8 z-[10]" id="about">
       <FadeUpMotionDiv>
         <div className="flex flex-col md:flex-row space-x-0 md:space-x-14">
-          <div className="bg-gray-50 border-2 rounded-3xl p-10 lg:p-10 space-y-4 ml-[-40px]
-                    lg:space-y-10 w-full md:w-full leading-8 flex flex-col justify-center">
+          <div className="bg-gray-50 bg-opacity-50 border-2 rounded-3xl p-10 lg:p-10 space-y-4 ml-[-40px]
+                    lg:space-y-10 w-full md:w-full leading-8 flex flex-col justify-center  z-[10]">
           <h1 className="text-4xl lg:text-5xl leading-tight text-gray-900 mb-0 pt-6 p-5">
           About
           </h1>
@@ -26,7 +26,7 @@ const About: React.FC = () => {
                 {paragraph1}
               </span>
             </div>
-            <div className="flex-1 text-gray-500 font-regular pl-5 pr-5">
+            <div className="flex-1 text-gray-500 font-regular pl-15 pr-5">
             <span className="text-black text-2xl">What can we do?</span> <br/> <br/>
               <span className="text-gray-500 font-light">
                 {paragraph2}
@@ -58,9 +58,6 @@ const About: React.FC = () => {
         />
       </div>
     </div> */}
-    <div className="absolute right-0 top-[-1000px] z-[-1] opacity-30 lg:opacity-100 transform translate-x-[300px]">
-      <img src="/assets/SH_doublehelix_01.svg" alt="Hero Background" />
-    </div>
     </div>
   );
 };

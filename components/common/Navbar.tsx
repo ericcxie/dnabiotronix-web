@@ -4,7 +4,8 @@ import FadeUpMotionDiv from "../utils/FadeUpMotion";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="bg-white p-4 text-black pt-5 pl-10 top-0 fixed z-999 w-full">
+    <nav className="bg-white bg-opacity-30 p-4 text-black pt-5 pl-10 top-0 fixed z-[999] w-full"
+    style={{ backdropFilter: "blur(5px)" }}>
       <div className="container mx-auto flex justify-between">
         <FadeUpMotionDiv>
         <div className="justify-start">

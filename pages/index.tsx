@@ -12,7 +12,11 @@ const HomePage: React.FC = () => {
     <div className="bg-white flex flex-col min-h-screen font-sora">
       <Navbar />
       <Hero />
-      <main className="flex-grow mx-4 md:px-10">
+      <div className="absolute right-[100px] top-[400px] z-[0] opacity-30 lg:opacity-100 
+      transform translate-x-[300px] w-[78vw]">
+        <img src="/assets/SH_doublehelix_01.svg" alt="Hero Background" />
+      </div>
+      <main className="flex-grow mx-4 md:px-10 z-10">
         <About />
         <Technology />
         <Team />
