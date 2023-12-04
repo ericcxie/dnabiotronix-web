@@ -8,21 +8,25 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const navRef = React.useRef<HTMLButtonElement>(null);
+  const menuRef = React.useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target as Node) &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
-    }
+    };
 
-    // Add event listener
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      // Unsubscribe from the event listener on cleanup
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [navRef]);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,12 +47,13 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
+      ref={navRef}
       className={`bg-white bg-opacity-30 p-4 text-black pt-5 pl-10 top-0 fixed z-[999] w-full ${
         scrolled ? "border-b-[1px] border-gray-200 backdrop-blur-sm" : ""
       }`}
       style={{ backdropFilter: "blur(5px)" }}
     >
-      <div className="container mx-auto flex justify-between">
+      <div ref={menuRef} className="container mx-auto flex justify-between">
         <FadeUpMotionDiv>
           <div className="justify-start pt-2 md:pt-0">
             <span
@@ -72,7 +77,6 @@ const Navbar: React.FC = () => {
 
         <div className="md:hidden">
           <button
-            ref={navRef}
             onClick={toggleMenu}
             className="hover:bg-gray-200 hover:bg-opacity-60 p-2 rounded-lg"
           >
@@ -82,7 +86,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="absolute top-16 left-4 right-4 mx-auto p-4 pl-6 bg-white border rounded-3xl shadow-md z-10">
+          <div className="absolute top-20 mt-1 left-4 right-4 mx-auto p-4 pl-6 bg-white border rounded-3xl shadow-md z-10">
             <nav>
               <Link
                 to="home"
