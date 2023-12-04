@@ -31,28 +31,33 @@ const Navbar: React.FC = () => {
         </div>
         </FadeUpMotionDiv>
         
-        <div className="justify-end flex pt-0.5 text-gray-600">
+        {/* Render mobile navigation for screens below a certain width */}
+        <div className="lg:hidden">
+          {/* Include your mobile navigation here */}
+        </div>
+
+        <div className=" hidden lg:flex  justify-end  pt-0.5 text-gray-600">
         <FadeUpMotionDiv>
-          <Link to="about" smooth={true} duration={1000} 
+          <Link to="about" smooth={true} duration={1000} offset={-50}
                 className="mx-10 text-sm hover:text-black hover:cursor-pointer 
                  transition duration-300">
             About
           </Link>
           </FadeUpMotionDiv>
           <FadeUpMotionDiv>
-          <Link to="news" smooth={true} duration={1000} 
+          <Link to="news" smooth={true} duration={1000} offset={-50}
             className="mx-10 text-sm hover:text-black hover:cursor-pointer 
                  transition duration-300">
             News</Link>
             </FadeUpMotionDiv>
             <FadeUpMotionDiv>
-          <Link to="team" smooth={true} duration={1000} 
+          <Link to="team" smooth={true} duration={1000} offset={-50}
            className="mx-10 text-sm hover:text-black hover:cursor-pointer
            transition duration-300">
             Team</Link>
             </FadeUpMotionDiv>
             <FadeUpMotionDiv>
-          <Link to="contact" smooth={true} duration={1000} 
+          <Link to="contact" smooth={true} duration={1000} offset={-50}
             className="mx-10 text-sm hover:text-black hover:cursor-pointer
             transition duration-300">
             Contact</Link>
