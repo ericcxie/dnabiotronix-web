@@ -1,14 +1,31 @@
 import { Link, animateScroll as scroll } from 'react-scroll';
 import FadeUpMotionDiv from "../utils/FadeUpMotion";
+import React, { useEffect, useState } from 'react';
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <>
       <section
         id="home"
         className="dark:bg-gray-dark relative z-10 overflow-hidden pb-16 mt-[60px] 
                    md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px] 
-                   
                    "
       >
         <div className="container mx-auto flex-wrap">
@@ -33,26 +50,31 @@ const Hero = () => {
                 </p>
                 </FadeUpMotionDiv>
                 <FadeUpMotionDiv>
-                <Link to="about" smooth={true} duration={1000} 
+                <Link to="about" smooth={true} duration={1000}  offset={-50}
                 className="text-black border-2 border-black text-sm font-bold
                 inline-block px-6 py-3 bg-transparent rounded-full hover:bg-black hover:text-white
                 transition duration-300">
                   LEARN MORE
                 </Link>
                 </FadeUpMotionDiv>
-                <div className="mt-20 pt-20 sm:mt-0 sm:pt-0"></div>
+                <div className="height:[100px] mt-10 pt-10 sm:mt-0 sm:pt-0"></div>
               </div>
             </div>
-            <FadeUpMotionDiv>
-            <div className="md:w-1/3 lg:w-1/2 px-4 absolute right-0 hidden xl:block ">
-              <div className="absolute left-[-70px] top-[-50px] z-[-1] opacity-30 lg:opacity-100 transform translate-x-[0px]">
-                <img
-                  src="/assets/landingImg.svg"
-                  alt="Hero Background"
-                />
+            <div className="md:w-1/3 lg:w-1/2 px-4 sm:absolute right-0  t-[50px]">
+            {isMobile ? (
+              <div className="sm:top-[-50px] lg:opacity-100 
+              width-[78vw]
+              transform translate-x-[0px]">
+                <FadeUpMotionDiv>
+                <img src="/assets/landingImgMobile.svg" alt="Mobile Hero Background" />
+                </FadeUpMotionDiv>
               </div>
+              ) : (
+                <div className="absolute left-[-70px] top-[450px] sm:top-[-50px] z-[-1] opacity-100 transform translate-x-[0px]">
+                  <img src="/assets/landingImg.svg" alt="Hero Background" />
+                </div>
+              )}
             </div>
-            </FadeUpMotionDiv>
           </div>
         </div>
         
