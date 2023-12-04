@@ -8,13 +8,14 @@ const Hero = () => {
         id="home"
         className="dark:bg-gray-dark relative z-10 overflow-hidden pb-16 mt-[60px] 
                    md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px] 
+                   
                    "
       >
         <div className="container mx-auto flex-wrap">
-          <div className="-mx-4 flex flex-wrap -mt-20">
+          <div className="-mx-4 flex flex-wrap mt-20 sm:-mt-20">
             <div className="px-4 flex-wrap">
               <div
-                className="wow fadeInUp max-w-[420px] text-left ml-20"
+                className="wow fadeInUp max-w-[420px] text-left ml-10 sm:ml-20 "
                 data-wow-delay=".2s"
               >
                 <FadeUpMotionDiv>
@@ -39,10 +40,11 @@ const Hero = () => {
                   LEARN MORE
                 </Link>
                 </FadeUpMotionDiv>
+                <div className="mt-20 pt-20 sm:mt-0 sm:pt-0"></div>
               </div>
             </div>
             <FadeUpMotionDiv>
-            <div className="md:w-1/3 lg:w-1/2 px-4 absolute right-0">
+            <div className="md:w-1/3 lg:w-1/2 px-4 absolute right-0 hidden xl:block ">
               <div className="absolute left-[-70px] top-[-50px] z-[-1] opacity-30 lg:opacity-100 transform translate-x-[0px]">
                 <img
                   src="/assets/landingImg.svg"
