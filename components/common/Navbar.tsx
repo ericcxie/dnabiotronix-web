@@ -109,16 +109,6 @@ const Navbar: React.FC = () => {
                 About
               </Link>
               <Link
-                to="news"
-                smooth={true}
-                duration={1000}
-                offset={-50}
-                onClick={toggleMenu}
-                className="block py-2 text-gray-900 hover:text-gray-700"
-              >
-                News
-              </Link>
-              <Link
                 to="team"
                 smooth={true}
                 duration={1000}
@@ -127,6 +117,16 @@ const Navbar: React.FC = () => {
                 className="block py-2 text-gray-900 hover:text-gray-700"
               >
                 Team
+              </Link>
+              <Link
+                to="news"
+                smooth={true}
+                duration={1000}
+                offset={-50}
+                onClick={toggleMenu}
+                className="block py-2 text-gray-900 hover:text-gray-700"
+              >
+                News
               </Link>
               <Link
                 to="contact"
