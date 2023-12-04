@@ -157,17 +157,6 @@ const Navbar: React.FC = () => {
           </FadeUpMotionDiv>
           <FadeUpMotionDiv>
             <Link
-              to="news"
-              smooth={true}
-              duration={1000}
-              offset={-50}
-              className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300"
-            >
-              News
-            </Link>
-          </FadeUpMotionDiv>
-          <FadeUpMotionDiv>
-            <Link
               to="team"
               smooth={true}
               duration={1000}
@@ -175,6 +164,17 @@ const Navbar: React.FC = () => {
               className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300"
             >
               Team
+            </Link>
+          </FadeUpMotionDiv>
+          <FadeUpMotionDiv>
+            <Link
+              to="news"
+              smooth={true}
+              duration={1000}
+              offset={-50}
+              className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300"
+            >
+              News
             </Link>
           </FadeUpMotionDiv>
           <FadeUpMotionDiv>
