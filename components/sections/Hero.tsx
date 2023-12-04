@@ -1,4 +1,4 @@
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link, animateScroll as scroll } from "react-scroll";
 import FadeUpMotionDiv from "../utils/FadeUpMotion";
 import React, { useEffect, useState } from 'react';
 
@@ -36,13 +36,15 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <FadeUpMotionDiv>
-                <h1 className="mt-0 mb-5 text-5xl font-regular leading-tight text-black sm:text-3xl sm:leading-tight md:text-5xl md:leading-tight text-left">
-                Sweat-based Glucose Monitoring with {" "}
-                <span className="font-semibold
-                bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text">
-                  DNA Transistors
-                </span>
-                </h1>
+                  <h1 className="mt-0 mb-5 text-5xl font-regular leading-tight text-black sm:text-3xl sm:leading-tight md:text-5xl md:leading-tight text-left">
+                    Sweat-based Glucose Monitoring with{" "}
+                    <span
+                      className="font-semibold
+                bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text"
+                    >
+                      DNA Transistors
+                    </span>
+                  </h1>
                 </FadeUpMotionDiv>
                 <FadeUpMotionDiv>
                 <p className="dark:text-body-color-dark mb-6 sm:mb-12 text-base !leading-relaxed text-gray-500 sm:text-lg md:text-xl">
@@ -50,12 +52,16 @@ const Hero = () => {
                 </p>
                 </FadeUpMotionDiv>
                 <FadeUpMotionDiv>
-                <Link to="about" smooth={true} duration={1000}  offset={-50}
+                <Link to="about" 
+                smooth={true} 
+                duration={1000}  
+                offset={-50}
                 className="text-black border-2 border-black text-sm font-bold
                 inline-block px-6 py-3 bg-transparent rounded-full hover:bg-black hover:text-white
-                transition duration-300">
-                  LEARN MORE
-                </Link>
+                transition duration-300"
+                  >
+                    LEARN MORE
+                  </Link>
                 </FadeUpMotionDiv>
                 <div className="height:[100px] mt-8 pt-0 sm:mt-0 sm:pt-0"></div>
               </div>
@@ -77,7 +83,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        
       </section>
     </>
   );
