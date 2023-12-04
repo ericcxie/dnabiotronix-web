@@ -15,10 +15,10 @@ const About: React.FC = () => {
         <div className="md:">
           <SectionHeader text="About Us" />
         </div>
-        <div className="flex flex-col md:flex-row space-x-0 md:space-x-14">
+        <div className="flex flex-col space-x-0 md:space-x-14">
           <div
-            className="bg-gray-100 bg-opacity-50 border-2 rounded-3xl p-6 lg:p-10 space-y-4 sm:ml-[-40px]
-                    lg:space-y-10 w-full md:w-full leading-8 flex flex-col justify-center z-[10]"
+            className="bg-gray-100 bg-opacity-50 border-2 rounded-3xl p-6 lg:p-10 space-y-4
+                    lg:space-y-10 w-full leading-8 flex flex-col justify-center z-[10]"
           >
             <h1 className="text-4xl lg:text-5xl leading-tight text-gray-900 mb-0 sm:pt-6 sm:p-5">
               About

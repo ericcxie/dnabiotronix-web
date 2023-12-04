@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import React, { useState } from "react";
 import handleSubmit from "../utils/submitForm";
 import { FaFacebookSquare, FaTwitterSquare, FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import SectionHeader from "../common/Header";
 import FadeUpMotionDiv from "../utils/FadeUpMotion";
@@ -15,8 +16,8 @@ interface FormValues {
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="max-w-screen-2xl mx-auto">
-      <div className="container mx-auto px-4 xl:px-20 py-8">
+    <section id="contact" className="container mx-auto px-4 xl:px-20 py-8">
+      <div>
         <FadeUpMotionDiv>
           <SectionHeader text="Reach Out" />
         </FadeUpMotionDiv>
@@ -57,12 +58,12 @@ const Contact: React.FC = () => {
                     <FaFacebookSquare size={33} />
                   </a>
                   <a
-                    className="hover:text-[#1DA1F2] transition duration-200"
+                    className="hover:text-gray-600 transition duration-200"
                     href="https://twitter.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FaTwitterSquare size={33} />
+                    <FaSquareXTwitter size={33} />
                   </a>
                   <a
                     className="hover:text-[#0077B5] transition duration-200"
