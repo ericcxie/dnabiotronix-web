@@ -34,7 +34,7 @@ const About: React.FC = () => {
             </div>     
       </div>
 
-      <hr className="mb-8 mt-6 h-0.5 border-t-0 bg-gray-300 opacity-100" />
+      <hr className="mb-8 mt-6 h-[1px] border-t-0 bg-gray-300 opacity-100" />
       <p className="text-black pl-5 pr-5"  style={{ fontSize: '19px' }}>
         DNA Biotronix is developing a {" "}
         <span className="font-bold"> wearable </span>
