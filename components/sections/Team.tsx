@@ -5,7 +5,7 @@ import FadeUpMotionDiv from "../utils/FadeUpMotion";
 
 const Team: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 xl:px-20 py-8">
+    <div className="container mx-auto px-4 xl:px-20 py-8" id="team">
       <FadeUpMotionDiv>
         <SectionHeader text="Behind The Idea" />
       </FadeUpMotionDiv>
