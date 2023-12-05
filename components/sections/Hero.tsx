@@ -80,12 +80,12 @@ const Hero = () => {
                   </FadeUpMotionDiv>
                 </div>
               ) : (
-                <div className="absolute z-[-1] w-100% rounded-3xl opacity-100 transform translate-x-[0px] sm:top-[10px] sm:left-[-35vw] md:left-[-40px] lg:top-[-2px] xl:top-[-20px] 2xl:top-[-100px] xl:left-[-70px]">
+                <div className="absolute z-[-1] w-100% rounded-3xl opacity-100 transform translate-x-[0px] sm:top-[10px] sm:left-[-35vw] md:left-[-40px] lg:top-[-2px] xl:top-[-20px] 2xl:top-[-100px] xl:left-[-70px] pr-10">
                   <FadeUpMotionDiv>
                     <img
                       src="/assets/landingImg.svg"
                       alt="Hero Background"
-                      className="rounded-tl-3xl rounded-bl-3xl 2xl:rounded-3xl"
+                      className="rounded-3xl"
                     />
                   </FadeUpMotionDiv>
                 </div>
