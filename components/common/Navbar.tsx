@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
       }`}
       style={{ backdropFilter: "blur(5px)" }}
     >
-      <div ref={menuRef} className="container mx-auto flex justify-between">
+      <div ref={menuRef} className="container lg:mx-auto flex justify-between w-100vw">
         <div className="justify-start pt-2 md:pt-0">
           <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text">
             <Link href="/">
@@ -129,37 +129,37 @@ const Navbar: React.FC = () => {
         )}
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-end pt-0.5 text-gray-600">
+        <div className="hidden md:flex justify-end pt-0.5 text-gray-600 w-80vw">
           <Link href="/">
-            <div className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300">
+            <div className="mx-4 text-sm hover:text-black hover:cursor-pointer transition duration-300">
               Home
             </div>
           </Link>
           <Link href="/about">
-            <div className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300">
+            <div className="mx-4 text-sm hover:text-black hover:cursor-pointer transition duration-300">
               About
             </div>
           </Link>
           <Link href="/technology">
-            <div className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300">
+            <div className="mx-4 text-sm hover:text-black hover:cursor-pointer transition duration-300">
               Technology
             </div>
           </Link>
 
           <Link href="/team">
-            <div className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300">
+            <div className="mx-4 text-sm hover:text-black hover:cursor-pointer transition duration-300">
               Team
             </div>
           </Link>
 
           <Link href="/news">
-            <div className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300">
+            <div className="mx-4 text-sm hover:text-black hover:cursor-pointer transition duration-300">
               News
             </div>
           </Link>
 
           <Link href="/contact">
-            <div className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300">
+            <div className="mx-4 text-sm hover:text-black hover:cursor-pointer transition duration-300">
               Contact
             </div>
           </Link>
