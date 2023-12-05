@@ -32,8 +32,10 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <FadeUpMotionDiv>
-                  <h1 className="mt-0 pr-3 mb-5 text-3xl md:text-5xl font-regular leading-tight 
-                  text-black sm:text-3xl sm:leading-tight md:leading-tight text-left ">
+                  <h1
+                    className="mt-0 pr-3 mb-5 text-3xl md:text-4xl lg:text-5xl font-regular leading-tight 
+                  text-black sm:leading-tight md:leading-tight text-left "
+                  >
                     Sweat-based Glucose Monitoring with
                     <br />{" "}
                     <span
@@ -62,7 +64,7 @@ const Hero = () => {
                 <div className="height:[100px] mt-8 pt-0 sm:mt-0 sm:pt-0"></div>
               </div>
             </div>
-            <div className="md:w-1/3 lg:w-1/2 px-4 sm:absolute right-0 t-[50px]">
+            <div className="md:w-1/3 lg:w-2/5 xl:w-1/2 px-4 sm:absolute right-0 t-[50px]">
               {isMobile ? (
                 <div
                   className="sm:top-[-50px] lg:opacity-100 
@@ -77,7 +79,7 @@ const Hero = () => {
                   </FadeUpMotionDiv>
                 </div>
               ) : (
-                <div className="rounded-3xl w-100% absolute xl:left-[-70px] xl:top-[-20px] sm:left-[-35vw] md:left-[-40px] sm:top-[10px] z-[-1] opacity-100 transform translate-x-[0px]">
+                <div className="absolute z-[-1] w-100% rounded-3xl opacity-100 transform translate-x-[0px] sm:top-[10px] sm:left-[-35vw] md:left-[-40px] lg:top-[-2px] xl:top-[-20px] xl:left-[-70px]">
                   <FadeUpMotionDiv>
                     <img
                       src="/assets/landingImg.svg"
