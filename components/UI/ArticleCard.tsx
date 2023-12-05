@@ -30,7 +30,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   };
 
   return (
-    <div className="bg-[#D9D9D9] bg-opacity-20 rounded-3xl border-2 p-6 w-[20rem] xl:w-[40rem] h-[20rem] xl:h-[26rem] relative">
+    <div className="bg-[#D9D9D9] bg-opacity-20 rounded-3xl border-2 p-6 w-[20rem] sm:w-[30rem] lg:w-[40rem] h-[20rem] xl:h-[26rem] relative">
       <AnimatePresence>
         <motion.div
           key={title}
