@@ -13,7 +13,7 @@ const About: React.FC = () => {
     <div className="container mx-auto px-8 xl:px-20 py-8 z-[10]" id="about">
       <FadeUpMotionDiv>
         <div className="md:">
-          <SectionHeader text="About Us" />
+          <SectionHeader text="Our story" />
         </div>
         <div className="flex flex-col space-x-0 md:space-x-14">
           <div
