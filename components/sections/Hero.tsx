@@ -1,4 +1,4 @@
-import { Link, animateScroll as scroll } from "react-scroll";
+import Link from "next/link";
 import FadeUpMotionDiv from "../utils/FadeUpMotion";
 import React, { useEffect, useState } from "react";
 
@@ -50,10 +50,7 @@ const Hero = () => {
                 </FadeUpMotionDiv>
                 <FadeUpMotionDiv>
                   <Link
-                    to="about"
-                    smooth={true}
-                    duration={1000}
-                    offset={-50}
+                    href="/about"
                     className="text-black border-2 border-black text-sm font-bold
                 inline-block px-6 py-3 bg-transparent rounded-full hover:bg-black hover:text-white
                 transition duration-300"
