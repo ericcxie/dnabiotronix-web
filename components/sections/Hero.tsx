@@ -21,7 +21,7 @@ const Hero = () => {
       <section
         id="home"
         className="dark:bg-gray-dark relative z-10 overflow-hidden px-2 pb-16 mt-[20px] sm:pt-[120px] sm:mt-[150px]
-                   md:pb-[120px] md:pt-[80px] xl:pb-[160px] xl:pt-[100px] 2xl:pb-[200px] 2xl:pt-[210px] mx-auto
+                   md:pb-[120px] md:pt-[80px] xl:pb-[160px] xl:pt-[100px] 2xl:pb-[200px] 2xl:pt-[210px]
                    "
       >
         <div className="container xl:mx-auto flex-wrap">
@@ -33,7 +33,7 @@ const Hero = () => {
               >
                 <FadeUpMotionDiv>
                   <h1
-                    className="mt-0 pr-3 mb-5 text-3xl md:text-4xl lg:text-5xl font-regular leading-tight 
+                    className="mt-0 pr-3 mb-5 text-3xl md:text-4xl xl:text-5xl font-regular leading-tight 
                   text-black sm:leading-tight md:leading-tight text-left "
                   >
                     Sweat-based Glucose Monitoring with
@@ -64,7 +64,8 @@ const Hero = () => {
                 <div className="height:[100px] mt-8 pt-0 sm:mt-0 sm:pt-0"></div>
               </div>
             </div>
-            <div className="md:w-1/3 lg:w-2/5 xl:w-1/2 px-4 sm:absolute right-0 t-[50px]">
+            {/* <div className="md:w-1/3 lg:w-2/5 xl:w-[650px] px-4 sm:absolute right-0 t-[50px]"> */}
+            <div className="md:w-1/3 lg:w-2/5 2xl:w-1/2 px-4 sm:absolute right-0 t-[50px]">
               {isMobile ? (
                 <div
                   className="sm:top-[-50px] lg:opacity-100 
@@ -79,7 +80,7 @@ const Hero = () => {
                   </FadeUpMotionDiv>
                 </div>
               ) : (
-                <div className="absolute z-[-1] w-100% rounded-3xl opacity-100 transform translate-x-[0px] sm:top-[10px] sm:left-[-35vw] md:left-[-40px] lg:top-[-2px] xl:top-[-20px] xl:left-[-70px]">
+                <div className="absolute z-[-1] w-100% rounded-3xl opacity-100 transform translate-x-[0px] sm:top-[10px] sm:left-[-35vw] md:left-[-40px] lg:top-[-2px] xl:top-[-20px] 2xl:top-[-100px] xl:left-[-70px]">
                   <FadeUpMotionDiv>
                     <img
                       src="/assets/landingImg.svg"
