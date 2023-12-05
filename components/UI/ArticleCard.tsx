@@ -44,7 +44,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
             {date}
           </div>
           <a href={readMoreLink} target="_blank" rel="noreferrer">
-            <h2 className="text-2xl xl:text-3xl text-black pt-12 xl:pt-14 hover:underline">
+            <h2 className="text-lg leading-snug xl:text-3xl text-black pt-12 xl:pt-14 hover:underline">
               {title}
             </h2>
           </a>

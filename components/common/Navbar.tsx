@@ -92,6 +92,14 @@ const Navbar: React.FC = () => {
                   About
                 </div>
               </Link>
+              <Link href="/technology">
+                <div
+                  onClick={toggleMenu}
+                  className="block py-2 text-gray-900 hover:text-gray-700"
+                >
+                  Technology
+                </div>
+              </Link>
               <Link href="/team">
                 <div
                   onClick={toggleMenu}
@@ -130,6 +138,11 @@ const Navbar: React.FC = () => {
           <Link href="/about">
             <div className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300">
               About
+            </div>
+          </Link>
+          <Link href="/technology">
+            <div className="mx-10 text-sm hover:text-black hover:cursor-pointer transition duration-300">
+              Technology
             </div>
           </Link>
 

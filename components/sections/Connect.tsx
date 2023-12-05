@@ -16,14 +16,14 @@ interface FormValues {
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="container mx-auto px-4 xl:px-20 py-8">
+    <section id="contact" className="container mx-auto px-8 xl:px-20 py-8">
       <div>
         <FadeUpMotionDiv>
           <SectionHeader text="Reach Out" />
         </FadeUpMotionDiv>
         <FadeUpMotionDiv>
-          <h1 className="text-4xl lg:text-5xl leading-tight text-gray-900 mb-4">
-            Contact Us
+          <h1 className="text-3xl lg:text-5xl leading-tight text-gray-900 mb-4">
+            Contact
           </h1>
         </FadeUpMotionDiv>
         <FadeUpMotionDiv>

@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
         {/* Divider Line */}
         <hr className="border-t border-gray-300" />
 
-        <div className="flex justify-between items-center mt-6">
+        <div className="flex justify-between items-center mt-6 space-x-16 md:space-x-0">
           <div>
-            <p className="text-sm text-gray-600">
+            <p className="text-xs md:text-sm text-gray-600">
               © {new Date().getFullYear()} DNA Biotronix. All rights reserved.
             </p>
           </div>

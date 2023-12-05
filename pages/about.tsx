@@ -7,7 +7,6 @@ const AboutPage: React.FC = () => {
   return (
     <Layout>
       <About />
-      <Technology />
     </Layout>
   );
 };

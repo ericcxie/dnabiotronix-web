@@ -23,16 +23,14 @@ const News: React.FC = () => {
   const currentNewsItem = newsData[currentIndex];
 
   return (
-    <div className="container mx-auto px-4 xl:px-20 py-8" id="news">
+    <div className="container mx-auto px-8 xl:px-20 py-8" id="news">
       <FadeUpMotionDiv>
         <SectionHeader text="In the spotlight" />
       </FadeUpMotionDiv>
       <FadeUpMotionDiv>
-        <div className="flex flex-col lg:flex-row justify-center xl:justify-between items-center space-y-8 lg:space-y-0 md:space-x-20 mx-auto">
-          <div className="text-black text-5xl xl:text-7xl flex flex-col justify-between h-64 xl:h-96">
-            <h1>Our______</h1>
-            <h1>__Latest__</h1>
-            <h1>_____News</h1>
+        <div className="flex flex-col lg:flex-row justify-start xl:justify-between space-y-8 lg:space-y-0 md:space-x-20 mx-auto">
+          <div className="text-black items-start text-3xl xl:text-5xl flex flex-col md:justify-between h-10 xl:h-96">
+            <h1>News</h1>
           </div>
           <ArticleCard
             key={currentIndex}
