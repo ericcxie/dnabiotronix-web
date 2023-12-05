@@ -85,7 +85,7 @@ const Hero = () => {
                     <img
                       src="/assets/landingImg.svg"
                       alt="Hero Background"
-                      className="rounded-tl-3xl rounded-bl-3xl"
+                      className="rounded-tl-3xl rounded-bl-3xl 2xl:rounded-3xl"
                     />
                   </FadeUpMotionDiv>
                 </div>
