@@ -20,7 +20,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="dark:bg-gray-dark relative z-10 overflow-hidden pb-16 mt-[60px] 
+        className="dark:bg-gray-dark relative z-10 overflow-hidden px-2 pb-16 mt-[60px] 
                    md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px] 
                    "
       >
@@ -32,8 +32,9 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <FadeUpMotionDiv>
-                  <h1 className="mt-0 mb-5 text-5xl font-regular leading-tight text-black sm:text-3xl sm:leading-tight md:text-5xl md:leading-tight text-left">
-                    Sweat-based Glucose Monitoring with{" "}
+                  <h1 className="mt-0 pr-3 mb-5 text-3xl md:text-5xl font-regular leading-tight text-black sm:text-3xl sm:leading-tight md:leading-tight text-left">
+                    Sweat-based Glucose Monitoring with
+                    <br />{" "}
                     <span
                       className="font-semibold
                 bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text"
