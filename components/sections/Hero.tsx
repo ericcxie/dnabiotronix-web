@@ -33,14 +33,14 @@ const Hero = () => {
               >
                 <FadeUpMotionDiv>
                   <h1
-                    className="mt-0 pr-3 mb-5 text-3xl md:text-4xl xl:text-5xl font-regular leading-tight 
-                  text-black sm:leading-tight md:leading-tight text-left "
+                    className="mt-0 pr-3 mb-5 text-3xl md:text-4xl xl:text-5xl font-regular leading-snug 
+                  text-black sm:leading-tight md:leading-10 text-left "
                   >
-                    Sweat-based Glucose Monitoring with
+                    Sweat-based Monitoring System with
                     <br />{" "}
                     <span
                       className="font-semibold
-                bg-gradient-to-r from-blue-600 to-blue-400 text-transparent bg-clip-text"
+                bg-gradient-to-r from-[#0696dc] to-[#029467] text-transparent bg-clip-text"
                     >
                       DNA Transistors
                     </span>
@@ -48,7 +48,7 @@ const Hero = () => {
                 </FadeUpMotionDiv>
                 <FadeUpMotionDiv>
                   <p className="dark:text-body-color-dark mb-5 text-base !leading-relaxed text-gray-500 sm:text-lg md:text-xl">
-                    Revolutionizing diabetes <br /> management
+                    Revolutionizing real-time <br /> biomarkers management
                   </p>
                 </FadeUpMotionDiv>
                 <FadeUpMotionDiv>

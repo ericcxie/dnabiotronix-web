@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import FadeUpMotionDiv from "../utils/FadeUpMotion";
+import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
@@ -47,18 +47,23 @@ const Navbar: React.FC = () => {
   return (
     <nav
       ref={navRef}
-      className={`bg-white bg-opacity-30 p-4 text-black pt-5 pl-10 top-0 fixed z-[999] w-full ${
+      className={`bg-white bg-opacity-30 px-4 py-2 text-black top-0 fixed z-[999] w-full ${
         scrolled ? "border-b-[1px] border-gray-200 backdrop-blur-sm" : ""
       }`}
       style={{ backdropFilter: "blur(5px)" }}
     >
-      <div ref={menuRef} className="container lg:mx-auto flex justify-between w-100vw">
+      <div
+        ref={menuRef}
+        className="container lg:mx-auto flex items-center justify-between w-100vw"
+      >
         <div className="justify-start pt-2 md:pt-0">
           <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text">
             <Link href="/">
-              <div className="text-xl font-bold cursor-pointer bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text">
-                DNA Biotronix
-              </div>
+              <img
+                className="w-[210px] md:w-[250px] 2xl:w-[265px]"
+                src="/assets/img/logo.png"
+                alt="DNA Biotronix"
+              />
             </Link>
           </span>
         </div>
