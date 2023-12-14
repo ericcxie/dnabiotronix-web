@@ -33,14 +33,14 @@ const Hero = () => {
               >
                 <FadeUpMotionDiv>
                   <h1
-                    className="mt-0 pr-3 mb-5 text-3xl md:text-4xl xl:text-5xl font-regular leading-snug 
-                  text-black sm:leading-tight md:leading-10 text-left "
+                    className="mt-0 pr-3 mb-5 text-3xl md:text-4xl xl:text-5xl font-regular leading-tight 
+                  text-black text-left "
                   >
                     Sweat-based Monitoring System with
                     <br />{" "}
                     <span
                       className="font-semibold
-                bg-gradient-to-r from-[#0696dc] to-[#029467] text-transparent bg-clip-text"
+                bg-gradient-to-tr from-[#0696dc] to-[#069eda] text-transparent bg-clip-text"
                     >
                       DNA Transistors
                     </span>
