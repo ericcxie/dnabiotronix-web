@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaSquareXTwitter className="w-6 h-6 text-gray-600 hover:text-gray-600" />
+              <FaSquareXTwitter className="w-6 h-6 text-gray-600 hover:text-black" />
             </a>
             <a
               href="https://www.linkedin.com/"

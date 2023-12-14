@@ -36,18 +36,6 @@ const Contact: React.FC = () => {
 
             <div className="lg:col-span-2 lg:flex lg:items-start">
               <div>
-                <p className="text-md md:text-lg text-center md:text-start text-black">
-                  Address:
-                </p>
-                <p className="text-md md:text-lg text-center md:text-start text-black hover:text-blue-600 hover:underline transition duration-200">
-                  <a
-                    href="https://maps.app.goo.gl/UJmfcAbzKqjgaMcv6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    653 S Cardinal St, Gilbert, AZ 85296
-                  </a>
-                </p>
                 <div className="flex justify-center md:justify-start space-x-4 mt-4 text-black">
                   <a
                     className="hover:text-[#4267B2] transition duration-200"
@@ -209,9 +197,9 @@ const ContactForm: React.FC = () => {
           <div className="relative group mt-2">
             <button
               type="submit"
-              className="transition-colors border duration-300 relative hover:bg-[#D9D9D9] text-sm lg:text-md inline-flex w-full items-center justify-center rounded-xl shadow-light-button dark:shadow-none active:shadow-inner bg-white dark:bg-darkmode px-5 py-3 text-gray-600 dark:text-gray-200"
+              className="transition-colors border duration-300 relative bg-[#0696dc] hover:bg-[#0481bf] text-sm lg:text-md inline-flex w-full items-center justify-center rounded-xl active:shadow-inner px-5 py-3"
             >
-              <span className="text-gray-500">Send message</span>
+              <span className="text-white">Send message</span>
             </button>
           </div>
         </div>
